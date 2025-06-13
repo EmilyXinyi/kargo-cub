@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: kargo-cub
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - stage: test
+      - stage: uat
+      - stage: prod
+  template:
+    metadata:
+      name: kargo-cub-{{stage}}
+      annotations:
+        kargo.akuity.io/authorized-stage: kargo-cub:{{stage}}
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/emilyxinyi/kargo-cub.git
+        targetRevision: stage/{{stage}}
+        path: .
+      destination:
+        server: mac2
+        namespace: kargo-cub-{{stage}}
+      syncPolicy:
+        syncOptions:
+        - CreateNamespace=true
