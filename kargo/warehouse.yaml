@@ -8,7 +8,7 @@ spec:
   subscriptions:
   - image:
       repoURL: public.ecr.aws/nginx/nginx
-      # repoURL: index.docker.io/library/nginx
-      # repoURL: index.docker.io/library/busybox
       semverConstraint: ^1.26.0
       discoveryLimit: 5
+  - image:
+      repoURL: ghcr.io/emilyxinyi/guestbook
