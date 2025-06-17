@@ -19,6 +19,10 @@ spec:
         - mountPath: /usr/share/nginx/html
           name: content
           readOnly: true
+      - image: ghcr.io/emilyxinyi/guestbook
+        name: guestbook
+        ports:
+        - containerPort: 80
       volumes:
       - configMap:
           name: kargo-cub-content
