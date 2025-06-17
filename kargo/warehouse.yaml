@@ -4,8 +4,11 @@ metadata:
   name: kargo-cub-warehouse
   namespace: kargo-cub
 spec:
+  shard: kargo-agent
   subscriptions:
   - image:
-      # repoURL: public.ecr.aws/nginx/nginx
-      # semverConstraint: ^1.26.0
-      # discoveryLimit: 5
+      repoURL: public.ecr.aws/nginx/nginx
+      # repoURL: index.docker.io/library/nginx
+      # repoURL: index.docker.io/library/busybox
+      semverConstraint: ^1.26.0
+      discoveryLimit: 5

@@ -6,7 +6,7 @@ metadata:
 spec:
   vars:
   - name: gitopsRepo
-    value: ${GITOPS_REPO_URL}
+    value: https://github.com/emilyxinyi/kargo-cub.git
   - name: imageRepo
     value: public.ecr.aws/nginx/nginx
   steps:

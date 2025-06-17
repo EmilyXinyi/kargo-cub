@@ -6,6 +6,7 @@ metadata:
   annotations:
     kargo.akuity.io/color: purple
 spec:
+  shard: kargo-agent
   requestedFreight:
   - origin:
       kind: Warehouse
@@ -27,6 +28,7 @@ metadata:
   annotations:
     kargo.akuity.io/color: blue
 spec:
+  shard: kargo-agent
   requestedFreight:
   - origin:
       kind: Warehouse
@@ -49,6 +51,7 @@ metadata:
   annotations:
     kargo.akuity.io/color: green
 spec:
+  shard: kargo-agent
   requestedFreight:
   - origin:
       kind: Warehouse
