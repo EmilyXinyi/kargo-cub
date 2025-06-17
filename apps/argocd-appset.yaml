@@ -23,7 +23,7 @@ spec:
         path: .
       destination:
         # server: https://kubernetes.default.svc
-        name: mac2
+        name: mac1
         namespace: kargo-cub-{{stage}}
       syncPolicy:
         syncOptions:
