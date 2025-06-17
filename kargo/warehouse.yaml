@@ -10,5 +10,3 @@ spec:
       repoURL: public.ecr.aws/nginx/nginx
       semverConstraint: ^1.26.0
       discoveryLimit: 5
-  - image:
-      repoURL: ghcr.io/emilyxinyi/guestbook
