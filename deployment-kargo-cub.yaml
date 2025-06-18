@@ -13,16 +13,12 @@ spec:
         app: kargo-cub
     spec:
       containers:
-      - image: public.ecr.aws/nginx/nginx:1.28.0
+      - image: public.ecr.aws/nginx/nginx:1.27.5
         name: nginx
         volumeMounts:
         - mountPath: /usr/share/nginx/html
           name: content
           readOnly: true
-      - image: ghcr.io/emilyxinyi/guestbook
-        name: guestbook
-        ports:
-        - containerPort: 80
       volumes:
       - configMap:
           name: kargo-cub-content
